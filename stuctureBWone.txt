@@ -1,0 +1,8 @@
+bandungwittaya/
+├── app/
+├── favicon.ico
+├── globals.css
+├── layout.tsx
+├── page.tsx               # หน้าที่ 1: ข้อมูลโรงเรียน & ประชาสัมพันธ์หลัก
+└── about/
+    └── page.tsx           # หน้าที่ 2: ข้อมูลเชิงลึกเกี่ยวกับโรงเรียน

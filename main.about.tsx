@@ -1,0 +1,42 @@
+export default function About() {
+  return (
+    <div className="space-y-6">
+      <section className="bg-white p-8 border border-pink-200 shadow-sm">
+        <h2 className="text-2xl font-bold text-purple-900 border-b-2 border-pink-500 pb-3 mb-6">
+          ข้อมูลทั่วไปเกี่ยวกับโรงเรียนบ้านดุงวิทยา
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <div className="p-4 bg-pink-50 border-l-4 border-pink-500">
+              <h3 className="font-bold text-purple-900">ปรัชญาโรงเรียน</h3>
+              <p className="text-sm text-slate-700 mt-1">"ปญฺญา โลกสฺมิ ปชฺโชโต" (ปัญญาเป็นแสงสว่างในโลก)</p>
+            </div>
+            
+            <div className="p-4 bg-purple-50 border-l-4 border-purple-600">
+              <h3 className="font-bold text-purple-900">อัตลักษณ์</h3>
+              <p className="text-sm text-slate-700 mt-1">วิชาการเด่น ยึดมั่นคุณธรรม นำสังคมพัฒนา</p>
+            </div>
+
+            <div className="p-4 bg-pink-50 border-l-4 border-pink-500">
+              <h3 className="font-bold text-purple-900">สีประจำโรงเรียน</h3>
+              <p className="text-sm text-slate-700 mt-1">ชมพู - ม่วง</p>
+            </div>
+          </div>
+
+          <div className="bg-purple-900 text-white p-6 border border-purple-950">
+            <h3 className="text-lg font-bold border-b border-pink-400 pb-2 mb-4">ข้อมูลการติดต่อราชการ</h3>
+            <ul className="space-y-3 text-sm text-pink-100">
+              <li><strong>สถานที่ตั้ง:</strong> โรงเรียนบ้านดุงวิทยา อำเภอบ้านดุง จังหวัดอุดรธานี</li>
+              <li><strong>โทรศัพท์:</strong> 042-XXX-XXX</li>
+              <li><strong>อีเมลสารบรรณ:</strong> admin@bandungwittaya.ac.th</li>
+            </ul>
+            <button className="mt-6 w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2 rounded-none border border-pink-300 duration-500">
+              ดาวน์โหลดเอกสารเผยแพร่ (PDF)
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
