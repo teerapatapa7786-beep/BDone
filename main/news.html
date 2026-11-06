@@ -1,42 +1,107 @@
-export default function About() {
-  return (
-    <div className="space-y-6">
-      <section className="bg-white p-8 border border-pink-200 shadow-sm">
-        <h2 className="text-2xl font-bold text-purple-900 border-b-2 border-pink-500 pb-3 mb-6">
-          ข้อมูลทั่วไปเกี่ยวกับโรงเรียนบ้านดุงวิทยา
-        </h2>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <div className="p-4 bg-pink-50 border-l-4 border-pink-500">
-              <h3 className="font-bold text-purple-900">ปรัชญาโรงเรียน</h3>
-              <p className="text-sm text-slate-700 mt-1">"ปญฺญา โลกสฺมิ ปชฺโชโต" (ปัญญาเป็นแสงสว่างในโลก)</p>
-            </div>
-            
-            <div className="p-4 bg-purple-50 border-l-4 border-purple-600">
-              <h3 className="font-bold text-purple-900">อัตลักษณ์</h3>
-              <p className="text-sm text-slate-700 mt-1">วิชาการเด่น ยึดมั่นคุณธรรม นำสังคมพัฒนา</p>
-            </div>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ข่าวประชาสัมพันธ์ - โรงเรียนบ้านดุงวิทยา</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade { animation: fadeIn 0.4s ease-out forwards; }
+  </style>
+</head>
+<body class="bg-[#2e1065] text-white font-sans min-h-screen flex flex-col justify-between">
 
-            <div className="p-4 bg-pink-50 border-l-4 border-pink-500">
-              <h3 className="font-bold text-purple-900">สีประจำโรงเรียน</h3>
-              <p className="text-sm text-slate-700 mt-1">ชมพู - ม่วง</p>
-            </div>
-          </div>
-
-          <div className="bg-purple-900 text-white p-6 border border-purple-950">
-            <h3 className="text-lg font-bold border-b border-pink-400 pb-2 mb-4">ข้อมูลการติดต่อราชการ</h3>
-            <ul className="space-y-3 text-sm text-pink-100">
-              <li><strong>สถานที่ตั้ง:</strong> โรงเรียนบ้านดุงวิทยา อำเภอบ้านดุง จังหวัดอุดรธานี</li>
-              <li><strong>โทรศัพท์:</strong> 042-XXX-XXX</li>
-              <li><strong>อีเมลสารบรรณ:</strong> admin@bandungwittaya.ac.th</li>
-            </ul>
-            <button className="mt-6 w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2 rounded-none border border-pink-300 duration-500">
-              ดาวน์โหลดเอกสารเผยแพร่ (PDF)
-            </button>
-          </div>
-        </div>
-      </section>
+  <!-- Top Bar -->
+  <div class="bg-[#1e1b4b] py-2 px-4 text-xs font-semibold border-b border-purple-900/60">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <span class="text-purple-300">สำนักงานเขตพื้นที่การศึกษามัธยมศึกษา อุดรธานี</span>
+      <span class="bg-pink-500 text-white px-2 py-0.5 rounded font-bold text-[10px]">News Page</span>
     </div>
-  )
-}
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="bg-[#3b0764] border-b-4 border-pink-500 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-pink-500 border-2 border-white flex items-center justify-center font-black text-xl text-white shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)]">
+          บดว
+        </div>
+        <div>
+          <h1 class="text-2xl font-extrabold tracking-tight text-white">โรงเรียนบ้านดุงวิทยา</h1>
+          <p class="text-[10px] font-bold text-pink-400 tracking-wider">BANDUNGWITTAYA SCHOOL</p>
+        </div>
+      </a>
+
+      <!-- Links -->
+      <nav class="flex flex-wrap gap-2 text-sm font-bold">
+        <a href="index.html" class="px-4 py-2 bg-[#4c1d95] hover:bg-pink-600 text-purple-100 border border-purple-700 shadow-[3px_3px_0px_0px_#1e1b4b] transition-all">หน้าแรก</a>
+        <a href="about.html" class="px-4 py-2 bg-[#4c1d95] hover:bg-pink-600 text-purple-100 border border-purple-700 shadow-[3px_3px_0px_0px_#1e1b4b] transition-all">เกี่ยวกับโรงเรียน</a>
+        <a href="news.html" class="px-4 py-2 bg-pink-500 text-white border border-pink-400 shadow-[3px_3px_0px_0px_#1e1b4b]">ข่าวประชาสัมพันธ์</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow animate-fade">
+    <h2 class="text-2xl font-black text-white mb-6 border-b-2 border-pink-500 pb-2 flex items-center gap-2">
+      <span class="w-4 h-6 bg-pink-500 inline-block"></span>
+      ข่าวประชาสัมพันธ์ทั้งหมด
+    </h2>
+
+    <div class="space-y-4">
+      <!-- News Accordion 1 -->
+      <div class="bg-[#3b0764] border-2 border-purple-700 p-5 shadow-[4px_4px_0px_0px_#1e1b4b]">
+        <div class="flex justify-between items-center cursor-pointer" onclick="toggleNews('news1')">
+          <h3 class="font-bold text-white text-base hover:text-pink-300">📌 ประกาศการเปิดรับสมัครนักเรียนใหม่ ปีการศึกษา 2026</h3>
+          <span class="text-xs font-mono text-pink-400">01 พ.ย. 2026 ▼</span>
+        </div>
+        <div id="news1" class="hidden mt-4 pt-4 border-t border-purple-800 text-xs text-purple-200 space-y-2">
+          <p>เปิดรับสมัครนักเรียนชั้นมัธยมศึกษาปีที่ 1 และ 4 ประเภทห้องเรียนพิเศษและห้องเรียนปกติ สามารถยื่นเอกสารการสมัครได้ที่อาคาร 1 ฝ่ายวิชาการ</p>
+        </div>
+      </div>
+
+      <!-- News Accordion 2 -->
+      <div class="bg-[#3b0764] border-2 border-purple-700 p-5 shadow-[4px_4px_0px_0px_#1e1b4b]">
+        <div class="flex justify-between items-center cursor-pointer" onclick="toggleNews('news2')">
+          <h3 class="font-bold text-white text-base hover:text-pink-300">📌 กิจกรรมต้อนรับเปิดเทอม และปฐมนิเทศนักเรียน</h3>
+          <span class="text-xs font-mono text-pink-400">28 ต.ค. 2026 ▼</span>
+        </div>
+        <div id="news2" class="hidden mt-4 pt-4 border-t border-purple-800 text-xs text-purple-200 space-y-2">
+          <p>ขอเชิญนักเรียนระดับชั้น ม.1 และ ม.4 เข้าร่วมการปฐมนิเทศ ณ หอประชุมใหญ่ ตั้งแต่เวลา 08.30 น. เป็นต้นไป</p>
+        </div>
+      </div>
+
+      <!-- News Accordion 3 -->
+      <div class="bg-[#3b0764] border-2 border-purple-700 p-5 shadow-[4px_4px_0px_0px_#1e1b4b]">
+        <div class="flex justify-between items-center cursor-pointer" onclick="toggleNews('news3')">
+          <h3 class="font-bold text-white text-base hover:text-pink-300">📌 สรุปผลการแข่งขันทางวิชาการระดับเขตพื้นที่การศึกษา</h3>
+          <span class="text-xs font-mono text-pink-400">15 ต.ค. 2026 ▼</span>
+        </div>
+        <div id="news3" class="hidden mt-4 pt-4 border-t border-purple-800 text-xs text-purple-200 space-y-2">
+          <p>ขอแสดงความยินดีกับตัวแทนนักเรียนที่ได้รับรางวัลเหรียญทองในการแข่งขันทักษะวิชาการระดับเขตประจำปี</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#1e1b4b] border-t-2 border-pink-500 py-6 text-center text-xs text-purple-300">
+    <p class="font-bold text-white">โรงเรียนบ้านดุงวิทยา อำเภอบ้านดุง จังหวัดอุดรธานี</p>
+    <p class="text-purple-400 mt-1">© 2026 BANDUNGWITTAYA SCHOOL. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript สำหรับคลิกพับ/ขยายดูเนื้อหาข่าว -->
+  <script>
+    function toggleNews(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
